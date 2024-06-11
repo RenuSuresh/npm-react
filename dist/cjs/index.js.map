@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../src/components/Button/Button.tsx"],"sourcesContent":[null],"names":["Button","props","buttonCb","isNative","React","View","createElement","Text","onClick"],"mappings":"mEAGA,MAAMA,EAAUC,IACf,MAAMC,SAAEA,EAAQC,SAAEA,GAAaF,EAC/B,OAAIE,EAEFC,gBAACC,EAAI,KACJD,EAAAE,cAACC,EAAI,KAAA,WAGDH,EAAQE,cAAA,SAAA,CAAAE,QAASN,YAAyB"}
