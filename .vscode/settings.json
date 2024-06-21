@@ -1,0 +1,6 @@
+{
+  "terminal.integrated.accessibleViewPreserveCursorPosition": false,
+  "terminal.integrated.accessibleViewFocusOnCommandExecution": false,
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.defaultProfile.osx": "bash"
+}
