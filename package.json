@@ -1,19 +1,16 @@
 {
   "name": "renu-button",
   "version": "1.0.3",
-  "main": "dist/npm-lib-react/index.js",
-  "react-native": "dist/npm-lib-react-native/index.js",
-  "module": "dist/npm-lib-react/index.js",
-  "types": "dist/npm-lib-react/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "type": "module",
+  "main": "dist/bundle.web.js",
+  "react-native": "dist/bundle.native.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c --bundleConfigAsCjs",
     "build:react": "rollup -c rollup.config.react.js",
     "build:react-native": "rollup -c rollup.config.react-native.js",
-    "build": "npm run build:react && npm run build:react-native"
+    "build:prod": "npm run rollup",
+    "build": "rollup -c rollup.config.mjs"
   },
   "keywords": [
     "test",
@@ -23,8 +20,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.24.7",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.3",
@@ -33,6 +36,7 @@
     "rollup": "^4.18.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.3",
     "typescript": "^5.4.5"
   },
