@@ -1,13 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Button } from "react-native";
 
-const Button = (props: any) => {
+const NativeButton = (props: any) => {
 	const { buttonCb, isNative } = props;
 	return (
 		<View>
-			<Text>Native</Text>
+			<Button title='Native Button' onPress={() => alert("Button Pressed!")} />
 		</View>
 	);
 };
 
-export default Button;
+export default NativeButton;

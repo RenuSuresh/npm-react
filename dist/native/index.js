@@ -1,1 +1,1 @@
-"use strict";var e=require("react"),t=require("react-native");exports.Button=function(r){return r.buttonCb,r.isNative,e.createElement(t.View,null,e.createElement(t.Text,null,"Native"))};
+"use strict";var t=require("react"),e=require("react-native");exports.NativeButton=function(r){return r.buttonCb,r.isNative,t.createElement(e.View,null,t.createElement(e.Button,{title:"Native Button",onPress:function(){return alert("Button Pressed!")}}))};
