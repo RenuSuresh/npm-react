@@ -2,12 +2,13 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
+import nodeBuiltins from 'rollup-plugin-node-builtins';
 
 //NEW
 import terser from '@rollup/plugin-terser'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-
-const packageJson = require('./package.json')
+import json from '@rollup/plugin-json';
+// const packageJson = require('./package.json')
 
 export default [
   // Configuration for the web build
@@ -24,6 +25,8 @@ export default [
       peerDepsExternal(),
       // NEW
       terser(),
+      json(),
+      nodeBuiltins(),
     ]
   },
   // Configuration for the native build
@@ -41,6 +44,8 @@ export default [
 
       // NEW
       terser(),
+      json(),
+      nodeBuiltins(),
     ]
   },
   // {
